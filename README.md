@@ -1,229 +1,315 @@
-# 🤖 TalentScout AI Hiring Assistant
+🤖 TalentScout — AI Hiring Assistant (LLM Screening Chatbot)
 
-An intelligent **AI-powered Hiring Assistant chatbot** designed to streamline the initial candidate screening process for TalentScout, a fictional technology recruitment agency.
+An intelligent AI-powered Hiring Assistant chatbot built for TalentScout, a fictional recruitment agency specializing in technology placements.
 
-This assistant interacts with candidates, collects essential information, and generates tailored technical interview questions based on their declared tech stack.
+This chatbot supports early-stage candidate screening by collecting structured candidate details and generating 3–5 tailored technical questions based on the candidate’s declared tech stack.
 
----
+📌 Project Overview
 
-## 🚀 Project Overview
+TalentScout Hiring Assistant automates the initial screening workflow by:
 
-The TalentScout Hiring Assistant automates early-stage recruitment by:
+Greeting the candidate and explaining the purpose
 
-✅ Gathering candidate details  
-✅ Maintaining structured conversation flow  
-✅ Generating technical screening questions  
-✅ Ensuring context-aware interactions  
-✅ Providing a professional hiring experience  
+Collecting essential candidate information
 
-This project demonstrates practical implementation of **LLMs, prompt engineering, conversational control, and AI product thinking.**
+Asking the candidate to declare their tech stack
 
----
+Generating technical screening questions per technology
 
-## ⭐ Key Features
+Maintaining conversation context and flow
 
-### ✅ Structured Conversation Flow
-The chatbot guides candidates step-by-step to collect:
+Handling fallback / unexpected inputs
 
-- Full Name  
-- Email Address  
-- Phone Number  
-- Years of Experience  
-- Desired Role  
-- Current Location  
-- Tech Stack  
+Ending the conversation gracefully
 
-This ensures predictable and professional interactions rather than behaving like a generic chatbot.
+This project demonstrates practical implementation of:
 
----
+LLMs • Prompt Engineering • Context Handling • Conversational Control • AI Product Thinking
 
-### ✅ AI-Powered Technical Question Generation
-Once the candidate provides their tech stack, the assistant generates **3–5 intermediate-level technical interview questions** for each technology.
+⭐ Key Features (Meets Assignment Requirements)
+✅ 1) Clean UI (Streamlit)
 
-**Example:**
+Simple, recruiter-style interface
 
-**Input:** Python, Django, MySQL  
-**Output:** Role-relevant screening questions for each technology.
+Chat-based interaction for candidates
 
----
+Clear input + response flow
 
-### ✅ Context-Aware Chat
-The chatbot maintains conversation state using **Streamlit session management**, allowing it to:
+✅ 2) Greeting + Purpose + Exit Keywords
 
-- Handle follow-ups  
-- Avoid repetitive questions  
-- Provide coherent responses  
+Greets candidates at the start
 
----
+Explains the assistant’s screening purpose
 
-### ✅ Professional Hiring Tone
-The assistant is designed to behave like a real recruitment tool:
+Supports conversation exit keywords like:
+exit, quit, stop, end, bye
 
-✔ Structured  
-✔ Concise  
-✔ Purpose-driven  
-✔ Non-deviating from hiring workflow  
+✅ 3) Candidate Information Gathering
 
----
+Collects the following details in a structured flow:
 
-## 🧠 Prompt Engineering Approach
+Full Name
 
-Prompts were carefully designed to:
+Email Address
 
-- Guide the model through controlled hiring stages  
-- Prevent unrelated conversations  
-- Generate practical technical questions  
-- Maintain professional tone  
-- Ensure consistent outputs across diverse tech stacks  
+Phone Number
 
-### **System Prompt Strategy**
-- Role-based prompting  
-- Task constraint instructions  
-- Output formatting guidance  
+Years of Experience
 
-This demonstrates applied understanding of **real-world LLM orchestration.**
+Desired Position(s)
 
----
+Current Location
 
-## 🛠️ Tech Stack
+Tech Stack
 
-- **Python**
-- **Streamlit** – UI development  
-- **Ollama (Local LLM)** – AI model execution  
-- **Session State Management** – Conversation control  
+✅ 4) Tech Stack Declaration
 
----
+Prompts candidates to provide their tech stack, including:
 
-## 📦 Installation Guide
+Programming languages
 
-### 1️⃣ Clone the Repository
+Frameworks
 
-```bash
-git clone https://github.com/kusuma775/talentscout-hiring-assistant.git
-cd talentscout-hiring-assistant
-```
+Databases
 
----
+Tools / Platforms
 
-### 2️⃣ Create Virtual Environment
+Example input:
+Python, Django, MySQL, Git, AWS
 
-```bash
-python -m venv venv
-```
+✅ 5) Technical Question Generation (3–5 per Tech)
 
-Activate:
-
-**Windows**
-```bash
-venv\Scripts\activate
-```
-
-**Mac/Linux**
-```bash
-source venv/bin/activate
-```
-
----
-
-### 3️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-### 4️⃣ Setup Environment Variables
-
-Create a `.env` file and add your configuration if required.
+Generates 3–5 intermediate-level technical questions for each technology mentioned.
 
 Example:
 
-```
-MODEL=llama3
-```
+Tech Stack: Python, Django, MySQL
+Output: 3–5 questions per technology tailored to assess proficiency.
 
----
+✅ 6) Context Handling (Coherent Flow)
 
-### 5️⃣ Run Ollama (Required)
+Maintains conversation context using:
 
-Make sure Ollama is installed and running locally:
+Streamlit session state
 
-```
+Stage-based conversation tracking
+
+Avoids repetition
+
+Handles follow-up responses smoothly
+
+✅ 7) Fallback Mechanism
+
+If the user provides unexpected input, the chatbot:
+
+Responds professionally
+
+Guides the candidate back to the correct flow
+
+Does not deviate from the hiring purpose
+
+✅ 8) End Conversation Gracefully
+
+Ends the chat with:
+
+Thank you message
+
+Next steps info
+
+Clear closure
+
+🧠 Prompt Engineering (Purpose of Prompting)
+
+Prompts were designed to ensure the model:
+
+1) Collects candidate information
+
+Controlled stage-by-stage prompting
+
+Validation-friendly output formats
+
+2) Generates relevant technical questions
+
+Questions are tech-specific
+
+Difficulty is intermediate-level
+
+Output is structured and consistent
+
+3) Maintains coherent and context-aware interactions
+
+Model is instructed to stay within hiring workflow
+
+Conversation remains purpose-driven
+
+🧩 Prompt Design Strategy (What Makes It Work)
+✅ System Prompt (Role + Constraints)
+
+The system prompt defines:
+
+Role: Hiring Assistant
+
+Tone: professional recruiter-style
+
+Scope: screening only
+
+Rules: no deviation, no irrelevant chat
+
+✅ Question Generation Prompt
+
+Uses a structured format like:
+
+Tech name
+
+Difficulty
+
+Output formatting
+
+Count of questions
+
+✅ Output Control
+
+Prompts include:
+
+formatting constraints
+
+consistent question structure
+
+stage-based logic
+
+🏗️ Architecture (Simple)
+
+UI Layer: Streamlit
+LLM Layer: Ollama (Local LLM, e.g., llama3)
+State Layer: Streamlit session_state
+Flow Control: Stage-based screening pipeline
+
+🛠️ Tech Stack
+
+Python
+
+Streamlit (Frontend UI)
+
+Ollama (Local LLM)
+
+Session State Management
+
+Git + GitHub (version control)
+
+📦 Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/kusuma775/talentscout-hiring-assistant.git
+cd talentscout-hiring-assistant
+
+2️⃣ Create Virtual Environment
+python -m venv venv
+
+
+Activate:
+
+Windows
+
+venv\Scripts\activate
+
+
+Mac/Linux
+
+source venv/bin/activate
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Install & Run Ollama (Required)
+
+Install Ollama from:
+https://ollama.com/
+
+Run the model locally:
+
 ollama run llama3
-```
 
----
-
-### 6️⃣ Launch the Application
-
-```bash
+5️⃣ Run the Streamlit App
 streamlit run app.py
-```
 
-The app will open in your browser 🚀
+🧪 Usage Guide
+Candidate Flow
 
----
+Candidate opens the chatbot
 
-## 📊 Example Workflow
+Assistant greets + explains purpose
 
-1️⃣ Candidate opens chat  
-2️⃣ Assistant collects professional details  
-3️⃣ Candidate enters tech stack  
-4️⃣ AI generates technical screening questions  
-5️⃣ Recruiter gets structured candidate data  
+Assistant collects candidate details
 
----
+Candidate provides tech stack
 
-## 🔐 Privacy & Security
+Assistant generates 3–5 questions per technology
 
-- No candidate data is permanently stored  
-- Environment variables protect sensitive configurations  
-- Designed with responsible AI interaction principles  
+Assistant ends conversation politely
 
----
+🔐 Data Handling & Privacy
 
-## 🎯 Why This Project Matters
+This project follows privacy best practices:
 
-Modern recruitment is increasingly AI-assisted.
+Candidate data is not stored permanently
 
-This project showcases the ability to:
+Data is kept in memory during the session only
 
-✅ Build real-world AI applications  
-✅ Control LLM behavior using prompt engineering  
-✅ Design structured conversational systems  
-✅ Think like an AI product developer  
-✅ Deliver practical automation tools  
+No real user data is collected during development
 
----
+Simulated/anonymized data used for testing
 
-## 🔮 Future Improvements
+Designed to align with privacy principles (GDPR-style)
 
-- Resume parsing  
-- Automated candidate scoring  
-- Recruiter dashboard  
-- Database integration  
-- Multi-role hiring workflows  
-- Deployment on cloud platforms  
+🧩 Challenges & Solutions
+Challenge 1: Keeping the chatbot structured (not generic)
 
----
+✅ Solution: Stage-based prompting + session state tracking.
 
-## 👩‍💻 Author
+Challenge 2: Generating relevant questions for diverse tech stacks
 
-**Kusuma Kurumu**  
-Aspiring AI/ML Engineer | Python Developer  
+✅ Solution: Prompt format enforces tech-specific, intermediate-level questions.
 
-🔗 LinkedIn:https://www.linkedin.com/in/kusumakurumu/
+Challenge 3: Handling unexpected inputs
 
----
+✅ Solution: Fallback responses + flow redirection logic.
 
-## ⭐ If you found this project useful, consider giving it a star!
+🧾 Version Control (GitHub Workflow)
 
+Code maintained using Git
 
+Clean commit history
 
+Repository structured for readability and maintainability
 
+Modular design for future extension
 
+🎥 Demo Video
 
+(Insert Loom link here)
+Example:
+https://www.loom.com/share/your-demo-link
 
+🚀 Optional Enhancements (Future Scope)
 
+Resume parsing + scoring
 
+Candidate scoring engine
+
+Recruiter dashboard
+
+Database integration
+
+Multi-role hiring workflows
+
+Cloud deployment (AWS/GCP)
+
+👩‍💻 Author
+
+Kurumu Kusuma
+Aspiring AI/ML Engineer | Python Developer
+
+🔗 LinkedIn: https://www.linkedin.com/in/kusumakurumu/
+
+🔗 GitHub: https://github.com/kusuma775
+
+⭐ If you found this project useful, consider giving it a star!
