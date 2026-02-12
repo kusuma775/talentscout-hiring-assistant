@@ -213,11 +213,12 @@ This project showcases the ability to:
 **Kusuma Kurumu**  
 Aspiring AI/ML Engineer | Python Developer  
 
-🔗 LinkedIn: https://linkedin.com/in/YOUR-LINKEDIN  
+🔗 LinkedIn:https://www.linkedin.com/in/kusumakurumu/
 
 ---
 
 ## ⭐ If you found this project useful, consider giving it a star!
+
 
 
 
