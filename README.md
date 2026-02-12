@@ -295,11 +295,6 @@ Repository structured for readability and maintainability
 
 Modular design for future extension
 
-🎥 Demo Video
-
-(Insert Loom link here)
-Example:
-https://www.loom.com/share/your-demo-link
 
 🚀 Optional Enhancements (Future Scope)
 
@@ -325,4 +320,5 @@ Aspiring AI/ML Engineer | Python Developer
 🔗 GitHub: https://github.com/kusuma775
 
 ⭐ If you found this project useful, consider giving it a star!
+
 
