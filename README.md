@@ -196,40 +196,52 @@ Session State Management
 
 Git + GitHub (version control)
 
-📦 Installation & Setup
-1️⃣ Clone the Repository
+## 📦 Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/kusuma775/talentscout-hiring-assistant.git
 cd talentscout-hiring-assistant
+```
 
-2️⃣ Create Virtual Environment
+### 2️⃣ Create Virtual Environment
+```bash
 python -m venv venv
+```
 
+### 3️⃣ Activate Virtual Environment
 
-Activate:
-
-Windows
-
+**Windows**
+```bash
 venv\Scripts\activate
+```
 
-
-Mac/Linux
-
+**Mac/Linux**
+```bash
 source venv/bin/activate
+```
 
-3️⃣ Install Dependencies
+### 4️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Install & Run Ollama (Required)
+### 5️⃣ Install & Run Ollama (Required)
+Download Ollama from:
 
-Install Ollama from:
 https://ollama.com/
 
-Run the model locally:
+Then run the model locally:
 
+```bash
 ollama run llama3
+```
 
-5️⃣ Run the Streamlit App
+### 6️⃣ Run the Streamlit App
+```bash
 streamlit run app.py
+```
+
 
 🧪 Usage Guide
 Candidate Flow
