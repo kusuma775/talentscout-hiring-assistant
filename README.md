@@ -102,8 +102,5 @@ This demonstrates applied understanding of real-world LLM orchestration.
 git clone https://github.com/YOUR-USERNAME/hiring-assistant-chatbot.git
 cd hiring-assistant-chatbot
 
-### 2️⃣ Create Virtual Environment
 
-python -m venv venv
-venv\Scripts\activate
 
